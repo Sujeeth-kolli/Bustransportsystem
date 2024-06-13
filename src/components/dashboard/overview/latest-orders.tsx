@@ -17,7 +17,7 @@ import dayjs from 'dayjs';
 
 const statusMap = {
   Approved: { label: 'Approved', color: 'success' },
-  Rejected: { label: 'Rejected', color: 'error' },
+  Rejected: { label: 'Rejected', color: 'warning' },
   refunded: { label: 'Refunded', color: 'warning' },
 } as const;
 
