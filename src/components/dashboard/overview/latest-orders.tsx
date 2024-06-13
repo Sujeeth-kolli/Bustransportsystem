@@ -16,16 +16,16 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr/Arr
 import dayjs from 'dayjs';
 
 const statusMap = {
-  pending: { label: 'Pending', color: 'warning' },
-  delivered: { label: 'Delivered', color: 'success' },
-  refunded: { label: 'Refunded', color: 'error' },
+  Approved: { label: 'Approved', color: 'success' },
+  Rejected: { label: 'Rejected', color: 'error' },
+  refunded: { label: 'Refunded', color: 'warning' },
 } as const;
 
 export interface Order {
   id: string;
   customer: { name: string };
   amount: number;
-  status: 'pending' | 'delivered' | 'refunded';
+  status: 'Approved' | 'Rejected' | 'refunded';
   createdAt: Date;
 }
 
@@ -43,9 +43,9 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
         <Table sx={{ minWidth: 800 }}>
           <TableHead>
             <TableRow>
-              <TableCell>Order</TableCell>
-              <TableCell>Customer</TableCell>
-              <TableCell sortDirection="desc">Date</TableCell>
+              <TableCell>Request id </TableCell>
+              <TableCell>Student name</TableCell>
+             { /*<TableCell sortDirection="desc">Date</TableCell>*/}
               <TableCell>Status</TableCell>
             </TableRow>
           </TableHead>
@@ -57,7 +57,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
                 <TableRow hover key={order.id}>
                   <TableCell>{order.id}</TableCell>
                   <TableCell>{order.customer.name}</TableCell>
-                  <TableCell>{dayjs(order.createdAt).format('MMM D, YYYY')}</TableCell>
+                 {/* <TableCell>{dayjs(order.createdAt).format('MMM D, YYYY')}</TableCell> */}
                   <TableCell>
                     <Chip color={color} label={label} size="small" />
                   </TableCell>
@@ -75,7 +75,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
           size="small"
           variant="text"
         >
-          View all
+         {/* View all */}
         </Button>
       </CardActions>
     </Card>
