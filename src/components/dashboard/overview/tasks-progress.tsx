@@ -91,7 +91,6 @@ export function TasksProgress({ value, sx }: TasksProgressProps): React.JSX.Elem
             Pending
           </Typography>
           <Typography variant="h4">{value}%</Typography>
-          <LinearProgress variant="determinate" value={value} />
         </Stack>
       </CardContent>
     </Card>

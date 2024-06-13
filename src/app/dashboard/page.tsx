@@ -15,13 +15,13 @@ export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={3}>
       <Grid lg={3} sm={6} xs={12}>
-        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="$24k" />
+        <Budget value="5000" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="1.6k" />
+        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="2500" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TasksProgress sx={{ height: '100%' }} value={75.5} />
+        <TasksProgress sx={{ height: '100%' }} value={2000} />
       </Grid>
       <Grid lg={8} md={12} xs={12}>
         <LatestOrders
