@@ -43,7 +43,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
         <Table sx={{ minWidth: 800 }}>
           <TableHead>
             <TableRow>
-              <TableCell>Request id </TableCell>
+              <TableCell>Request id 12 </TableCell>
               <TableCell>Student name</TableCell>
              { /*<TableCell sortDirection="desc">Date</TableCell>*/}
               <TableCell>Status</TableCell>
