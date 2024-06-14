@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { Download as DownloadIcon } from '@phosphor-icons/react/dist/ssr/Download';
 import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
 import { Upload as UploadIcon } from '@phosphor-icons/react/dist/ssr/Upload';
-import dayjs from 'dayjs';
 
 import { config } from '@/config';
 import { CustomersFilters } from '@/components/dashboard/customer/customers-filters';
@@ -23,7 +22,7 @@ const customers = [
     email: 'alcides.antonio@devias.io',
     phone: '908-691-3242',
     feeStatus: 'paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'approved',
   },
   {
     id: 'USR-009',
@@ -32,7 +31,7 @@ const customers = [
     email: 'marcus.finn@devias.io',
     phone: '415-907-2647',
     feeStatus: 'not paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'rejected',
   },
   {
     id: 'USR-008',
@@ -41,7 +40,7 @@ const customers = [
     email: 'jie.yan.song@devias.io',
     phone: '770-635-2682',
     feeStatus: 'paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'approved',
   },
   {
     id: 'USR-007',
@@ -50,7 +49,7 @@ const customers = [
     email: 'nasimiyu.danai@devias.io',
     phone: '801-301-7894',
     feeStatus: 'not paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'rejected',
   },
   {
     id: 'USR-006',
@@ -59,7 +58,7 @@ const customers = [
     email: 'iulia.albu@devias.io',
     phone: '313-812-8947',
     feeStatus: 'paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'approved',
   },
   {
     id: 'USR-005',
@@ -68,7 +67,7 @@ const customers = [
     email: 'fran.perez@devias.io',
     phone: '712-351-5711',
     feeStatus: 'not paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'rejected',
   },
   {
     id: 'USR-004',
@@ -77,7 +76,7 @@ const customers = [
     email: 'penjani.inyene@devias.io',
     phone: '858-602-3409',
     feeStatus: 'paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'approved',
   },
   {
     id: 'USR-003',
@@ -86,7 +85,7 @@ const customers = [
     email: 'carson.darrin@devias.io',
     phone: '304-428-3097',
     feeStatus: 'not paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'rejected',
   },
   {
     id: 'USR-002',
@@ -95,7 +94,7 @@ const customers = [
     email: 'siegbert.gottfried@devias.io',
     phone: '702-661-1654',
     feeStatus: 'paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'approved',
   },
   {
     id: 'USR-001',
@@ -104,7 +103,7 @@ const customers = [
     email: 'miron.vitold@devias.io',
     phone: '972-333-4106',
     feeStatus: 'not paid',
-    createdAt: dayjs().subtract(2, 'hours').toDate(),
+    passStatus: 'rejected',
   },
 ] satisfies Customer[];
 
