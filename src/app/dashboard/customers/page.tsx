@@ -1,28 +1,34 @@
+// src/app/dashboard/customers/page.tsx
 import * as React from 'react';
-import type { Metadata } from 'next';
+// import { Link } from 'next/link';
+// import AddIcon from '@mui/icons-material/Add';
+import AddIcon from '@mui/icons-material/Add';
+import DownloadIcon from '@mui/icons-material/Download';
+// import MenuIcon from '@mui/icons-material/Menu';
+import UploadIcon from '@mui/icons-material/Upload';
 import Button from '@mui/material/Button';
+// import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { Download as DownloadIcon } from '@phosphor-icons/react/dist/ssr/Download';
-import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
-import { Upload as UploadIcon } from '@phosphor-icons/react/dist/ssr/Upload';
 
 import { config } from '@/config';
 import { CustomersFilters } from '@/components/dashboard/customer/customers-filters';
-import { CustomersTable } from '@/components/dashboard/customer/customers-table';
-import type { Customer } from '@/components/dashboard/customer/customers-table';
+import { CustomersTable, type Customer } from '@/components/dashboard/customer/customers-table';
 
-export const metadata = { title: `Customers | Dashboard | ${config.site.name}` } satisfies Metadata;
+export const metadata = { title: `Customers | Dashboard | ${config.site.name}` };
 
-const customers = [
+const customers: Customer[] = [
   {
     id: 'USR-010',
     name: 'Alcides Antonio',
     avatar: '/assets/avatar-10.png',
     email: 'alcides.antonio@devias.io',
     phone: '908-691-3242',
-    feeStatus: 'paid',
-    passStatus: 'approved',
+    passStatus: '/approval/USR-010', // Example links, actual logic may vary
+    busPassId: 'BP-010',
+    paymentStatus: 'paid',
+    stop: 'Main Street',
+    passValidity: '2024-12-31',
   },
   {
     id: 'USR-009',
@@ -30,84 +36,16 @@ const customers = [
     avatar: '/assets/avatar-9.png',
     email: 'marcus.finn@devias.io',
     phone: '415-907-2647',
-    feeStatus: 'not paid',
-    passStatus: 'rejected',
+    passStatus: '/rejection/USR-009', // Example links, actual logic may vary
+    busPassId: 'BP-009',
+    paymentStatus: 'not paid',
+    stop: 'First Avenue',
+    passValidity: '2025-01-15',
   },
-  {
-    id: 'USR-008',
-    name: 'Jie Yan',
-    avatar: '/assets/avatar-8.png',
-    email: 'jie.yan.song@devias.io',
-    phone: '770-635-2682',
-    feeStatus: 'paid',
-    passStatus: 'approved',
-  },
-  {
-    id: 'USR-007',
-    name: 'Nasimiyu Danai',
-    avatar: '/assets/avatar-7.png',
-    email: 'nasimiyu.danai@devias.io',
-    phone: '801-301-7894',
-    feeStatus: 'not paid',
-    passStatus: 'rejected',
-  },
-  {
-    id: 'USR-006',
-    name: 'Iulia Albu',
-    avatar: '/assets/avatar-6.png',
-    email: 'iulia.albu@devias.io',
-    phone: '313-812-8947',
-    feeStatus: 'paid',
-    passStatus: 'approved',
-  },
-  {
-    id: 'USR-005',
-    name: 'Fran Perez',
-    avatar: '/assets/avatar-5.png',
-    email: 'fran.perez@devias.io',
-    phone: '712-351-5711',
-    feeStatus: 'not paid',
-    passStatus: 'rejected',
-  },
-  {
-    id: 'USR-004',
-    name: 'Penjani Inyene',
-    avatar: '/assets/avatar-4.png',
-    email: 'penjani.inyene@devias.io',
-    phone: '858-602-3409',
-    feeStatus: 'paid',
-    passStatus: 'approved',
-  },
-  {
-    id: 'USR-003',
-    name: 'Carson Darrin',
-    avatar: '/assets/avatar-3.png',
-    email: 'carson.darrin@devias.io',
-    phone: '304-428-3097',
-    feeStatus: 'not paid',
-    passStatus: 'rejected',
-  },
-  {
-    id: 'USR-002',
-    name: 'Siegbert Gottfried',
-    avatar: '/assets/avatar-2.png',
-    email: 'siegbert.gottfried@devias.io',
-    phone: '702-661-1654',
-    feeStatus: 'paid',
-    passStatus: 'approved',
-  },
-  {
-    id: 'USR-001',
-    name: 'Miron Vitold',
-    avatar: '/assets/avatar-1.png',
-    email: 'miron.vitold@devias.io',
-    phone: '972-333-4106',
-    feeStatus: 'not paid',
-    passStatus: 'rejected',
-  },
-] satisfies Customer[];
+  // Add other customers with similar fields
+];
 
-export default function Page(): React.JSX.Element {
+export default function Page(): React.ReactElement {
   const page = 0;
   const rowsPerPage = 5;
 
@@ -119,27 +57,22 @@ export default function Page(): React.JSX.Element {
         <Stack spacing={1} sx={{ flex: '1 1 auto' }}>
           <Typography variant="h4">Customers</Typography>
           <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-            <Button color="inherit" startIcon={<UploadIcon fontSize="var(--icon-fontSize-md)" />}>
+            <Button color="inherit" startIcon={<UploadIcon />}>
               Import
             </Button>
-            <Button color="inherit" startIcon={<DownloadIcon fontSize="var(--icon-fontSize-md)" />}>
+            <Button color="inherit" startIcon={<DownloadIcon />}>
               Export
             </Button>
           </Stack>
         </Stack>
         <div>
-          <Button startIcon={<PlusIcon fontSize="var(--icon-fontSize-md)" />} variant="contained">
+          <Button startIcon={<AddIcon />} variant="contained">
             Add
           </Button>
         </div>
       </Stack>
       <CustomersFilters />
-      <CustomersTable
-        count={paginatedCustomers.length}
-        page={page}
-        rows={paginatedCustomers}
-        rowsPerPage={rowsPerPage}
-      />
+      <CustomersTable count={customers.length} page={page} rows={paginatedCustomers} rowsPerPage={rowsPerPage} />
     </Stack>
   );
 }
