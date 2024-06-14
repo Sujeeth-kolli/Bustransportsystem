@@ -67,14 +67,15 @@
 // }
 
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import LinearProgress from '@mui/material/LinearProgress';
+// import LinearProgress from '@mui/material/LinearProgress';
 import Stack from '@mui/material/Stack';
 import type { SxProps } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import { ListBullets as ListBulletsIcon } from '@phosphor-icons/react/dist/ssr/ListBullets';
+
+// import { ListBullets as ListBulletsIcon } from '@phosphor-icons/react/dist/ssr/ListBullets';
 
 export interface PendingRequestsProgressProps {
   sx?: SxProps;
@@ -89,7 +90,7 @@ export function PendingRequestsProgress({ value, sx }: PendingRequestsProgressPr
           <Typography color="text.secondary" variant="overline">
             Pending Requests
           </Typography>
-          <Typography variant="h4">{value}%</Typography>
+          <Typography variant="h4">{value}</Typography>
         </Stack>
       </CardContent>
     </Card>
