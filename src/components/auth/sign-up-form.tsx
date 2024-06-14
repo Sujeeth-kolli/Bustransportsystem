@@ -6,9 +6,7 @@ import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
-import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import InputLabel from '@mui/material/InputLabel';
 import Link from '@mui/material/Link';
@@ -74,12 +72,6 @@ export function SignUpForm(): React.JSX.Element {
     <Stack spacing={3}>
       <Stack spacing={1}>
         <Typography variant="h4">Sign up</Typography>
-        <Typography color="text.secondary" variant="body2">
-          Already have an account?{' '}
-          <Link component={RouterLink} href={paths.auth.signIn} underline="hover" variant="subtitle2">
-            Sign in
-          </Link>
-        </Typography>
       </Stack>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack spacing={2}>
@@ -127,6 +119,14 @@ export function SignUpForm(): React.JSX.Element {
               </FormControl>
             )}
           />
+
+          <Typography color="text.secondary" variant="body2">
+            Already have an account?{' '}
+            <Link component={RouterLink} href={paths.auth.signIn} underline="hover" variant="subtitle2">
+              Sign in
+            </Link>
+          </Typography>
+
           {errors.root ? <Alert color="error">{errors.root.message}</Alert> : null}
           <Button disabled={isPending} type="submit" variant="contained">
             Sign up
