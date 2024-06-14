@@ -22,7 +22,7 @@ const customers = [
     avatar: '/assets/avatar-10.png',
     email: 'alcides.antonio@devias.io',
     phone: '908-691-3242',
-    address: { city: 'Madrid', country: 'Spain', state: 'Comunidad de Madrid', street: '4158 Hedge Street' },
+    feeStatus: 'paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -31,7 +31,7 @@ const customers = [
     avatar: '/assets/avatar-9.png',
     email: 'marcus.finn@devias.io',
     phone: '415-907-2647',
-    address: { city: 'Carson City', country: 'USA', state: 'Nevada', street: '2188 Armbrester Drive' },
+    feeStatus: 'not paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -40,7 +40,7 @@ const customers = [
     avatar: '/assets/avatar-8.png',
     email: 'jie.yan.song@devias.io',
     phone: '770-635-2682',
-    address: { city: 'North Canton', country: 'USA', state: 'Ohio', street: '4894 Lakeland Park Drive' },
+    feeStatus: 'paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -49,7 +49,7 @@ const customers = [
     avatar: '/assets/avatar-7.png',
     email: 'nasimiyu.danai@devias.io',
     phone: '801-301-7894',
-    address: { city: 'Salt Lake City', country: 'USA', state: 'Utah', street: '368 Lamberts Branch Road' },
+    feeStatus: 'not paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -58,7 +58,7 @@ const customers = [
     avatar: '/assets/avatar-6.png',
     email: 'iulia.albu@devias.io',
     phone: '313-812-8947',
-    address: { city: 'Murray', country: 'USA', state: 'Utah', street: '3934 Wildrose Lane' },
+    feeStatus: 'paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -67,17 +67,16 @@ const customers = [
     avatar: '/assets/avatar-5.png',
     email: 'fran.perez@devias.io',
     phone: '712-351-5711',
-    address: { city: 'Atlanta', country: 'USA', state: 'Georgia', street: '1865 Pleasant Hill Road' },
+    feeStatus: 'not paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
-
   {
     id: 'USR-004',
     name: 'Penjani Inyene',
     avatar: '/assets/avatar-4.png',
     email: 'penjani.inyene@devias.io',
     phone: '858-602-3409',
-    address: { city: 'Berkeley', country: 'USA', state: 'California', street: '317 Angus Road' },
+    feeStatus: 'paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -86,7 +85,7 @@ const customers = [
     avatar: '/assets/avatar-3.png',
     email: 'carson.darrin@devias.io',
     phone: '304-428-3097',
-    address: { city: 'Cleveland', country: 'USA', state: 'Ohio', street: '2849 Fulton Street' },
+    feeStatus: 'not paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -95,7 +94,7 @@ const customers = [
     avatar: '/assets/avatar-2.png',
     email: 'siegbert.gottfried@devias.io',
     phone: '702-661-1654',
-    address: { city: 'Los Angeles', country: 'USA', state: 'California', street: '1798 Hickory Ridge Drive' },
+    feeStatus: 'paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
   {
@@ -104,7 +103,7 @@ const customers = [
     avatar: '/assets/avatar-1.png',
     email: 'miron.vitold@devias.io',
     phone: '972-333-4106',
-    address: { city: 'San Diego', country: 'USA', state: 'California', street: '75247' },
+    feeStatus: 'not paid',
     createdAt: dayjs().subtract(2, 'hours').toDate(),
   },
 ] satisfies Customer[];
