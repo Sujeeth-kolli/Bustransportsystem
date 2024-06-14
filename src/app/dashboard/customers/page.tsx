@@ -1,10 +1,15 @@
 // src/app/dashboard/customers/page.tsx
 import * as React from 'react';
+<<<<<<< HEAD
 // import { Link } from 'next/link';
 // import AddIcon from '@mui/icons-material/Add';
 import AddIcon from '@mui/icons-material/Add';
 import DownloadIcon from '@mui/icons-material/Download';
 // import MenuIcon from '@mui/icons-material/Menu';
+=======
+import AddIcon from '@mui/icons-material/Add';
+import DownloadIcon from '@mui/icons-material/Download';
+>>>>>>> 6670f1130dc99bbbeb0861670dc85adb4d7dd2de
 import UploadIcon from '@mui/icons-material/Upload';
 import Button from '@mui/material/Button';
 // import Select from '@mui/material/Select';
@@ -22,7 +27,7 @@ const customers: Customer[] = [
     id: 'USR-010',
     name: 'Alcides Antonio',
     avatar: '/assets/avatar-10.png',
-    email: 'alcides.antonio@devias.io',
+    email: 'idcse@gmail.com',
     phone: '908-691-3242',
     passStatus: '/approval/USR-010', // Example links, actual logic may vary
     busPassId: 'BP-010',
@@ -34,9 +39,13 @@ const customers: Customer[] = [
     id: 'USR-009',
     name: 'Marcus Finn',
     avatar: '/assets/avatar-9.png',
-    email: 'marcus.finn@devias.io',
+    email: 'idcse@gmail.com',
     phone: '415-907-2647',
+<<<<<<< HEAD
     passStatus: '/rejection/USR-009', // Example links, actual logic may vary
+=======
+    passStatus: '/approval/USR-009', // Example links, actual logic may vary
+>>>>>>> 6670f1130dc99bbbeb0861670dc85adb4d7dd2de
     busPassId: 'BP-009',
     paymentStatus: 'not paid',
     stop: 'First Avenue',
