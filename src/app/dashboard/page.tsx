@@ -14,6 +14,7 @@ export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } 
 export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={3}>
+<<<<<<< HEAD
       <Grid lg={3} md={4} sm={12}>
         <TotalRequests value="5000" />
       </Grid>
@@ -24,6 +25,16 @@ export default function Page(): React.JSX.Element {
       &ensp; &ensp;
       <Grid lg={3} md={4} sm={12}>
         <PendingRequestsProgress value="2000" />
+=======
+      <Grid lg={3} sm={6} xs={12}>
+        <Budget diff={12} trend="up" sx={{ height: '100%' }} value="$24k" />
+      </Grid>
+      <Grid lg={3} sm={6} xs={12}>
+        <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="1.6k" />
+      </Grid>
+      <Grid lg={3} sm={6} xs={12}>
+        <TasksProgress sx={{ height: '100%' }} value={75.5} />
+>>>>>>> parent of a5b55aa (13-06-24 11.55am)
       </Grid>
       <Grid lg={8} md={12} xs={12}>
         <LatestOrders

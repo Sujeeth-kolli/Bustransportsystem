@@ -93,6 +93,7 @@ import Stack from '@mui/material/Stack';
 // import type { SxProps } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
+<<<<<<< HEAD:src/components/dashboard/overview/total-requests.tsx
 // import { ArrowDown as ArrowDownIcon } from '@phosphor-icons/react/dist/ssr/ArrowDown';
 // import { ArrowUp as ArrowUpIcon } from '@phosphor-icons/react/dist/ssr/ArrowUp';
 // import { CurrencyDollar as CurrencyDollarIcon } from '@phosphor-icons/react/dist/ssr/CurrencyDollar';
@@ -102,14 +103,38 @@ export interface TotalRequestsCardProps {
 }
 
 export function TotalRequests({ value }: TotalRequestsCardProps): React.JSX.Element {
+=======
+export interface BudgetProps {
+  diff?: number;
+  trend: 'up' | 'down';
+  sx?: SxProps;
+  value: string;
+}
+
+export function Budget({ diff, trend, sx, value }: BudgetProps): React.JSX.Element {
+  const TrendIcon = trend === 'up' ? ArrowUpIcon : ArrowDownIcon;
+  const trendColor = trend === 'up' ? 'var(--mui-palette-success-main)' : 'var(--mui-palette-error-main)';
+
+>>>>>>> parent of a5b55aa (13-06-24 11.55am):src/components/dashboard/overview/budget.tsx
   return (
-    <Card sx={{ width: '300px', padding: '16px', borderRadius: '12px' }}>
+    <Card sx={{ ...sx, width: '300px', padding: '16px', borderRadius: '12px' }}>
       <CardContent sx={{ padding: 0 }}>
         <Stack spacing={2}>
           <Typography color="text.secondary" variant="overline">
             Total Requests
           </Typography>
           <Typography variant="h4">{value}</Typography>
+<<<<<<< HEAD:src/components/dashboard/overview/total-requests.tsx
+=======
+          {diff !== undefined && (
+            <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+              <TrendIcon style={{ color: trendColor }} />
+              <Typography color={trendColor} variant="body2">
+                {diff}%
+              </Typography>
+            </Stack>
+          )}
+>>>>>>> parent of a5b55aa (13-06-24 11.55am):src/components/dashboard/overview/budget.tsx
         </Stack>
       </CardContent>
     </Card>
