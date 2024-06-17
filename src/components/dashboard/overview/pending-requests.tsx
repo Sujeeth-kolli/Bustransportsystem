@@ -90,12 +90,7 @@ export function PendingRequestsProgress({ value, sx }: PendingRequestsProgressPr
           <Typography color="text.secondary" variant="overline">
             Pending Requests
           </Typography>
-<<<<<<< HEAD:src/components/dashboard/overview/pending-requests.tsx
           <Typography variant="h4">{value}</Typography>
-=======
-          <Typography variant="h4">{value}%</Typography>
-          <LinearProgress variant="determinate" value={value} />
->>>>>>> parent of a5b55aa (13-06-24 11.55am):src/components/dashboard/overview/tasks-progress.tsx
         </Stack>
       </CardContent>
     </Card>

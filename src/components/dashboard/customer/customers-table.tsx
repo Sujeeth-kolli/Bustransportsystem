@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // // // 'use client';
 
 // // // import * as React from 'react';
@@ -265,8 +264,6 @@
 
 // src/components/dasboard/customer/customers-table.tsx
 
-=======
->>>>>>> 6670f1130dc99bbbeb0861670dc85adb4d7dd2de
 'use client';
 
 import * as React from 'react';
@@ -349,10 +346,6 @@ export function CustomersTable({
               </TableCell>
               <TableCell>Student ID</TableCell>
               <TableCell>Name</TableCell>
-<<<<<<< HEAD
-=======
-              <TableCell>Email</TableCell>
->>>>>>> 6670f1130dc99bbbeb0861670dc85adb4d7dd2de
               <TableCell>Bus Pass ID</TableCell>
               <TableCell>Payment Status</TableCell>
               <TableCell>Stop</TableCell>
@@ -385,10 +378,6 @@ export function CustomersTable({
                       <Typography variant="subtitle2">{row.name}</Typography>
                     </Stack>
                   </TableCell>
-<<<<<<< HEAD
-=======
-                  <TableCell>{row.email}</TableCell>
->>>>>>> 6670f1130dc99bbbeb0861670dc85adb4d7dd2de
                   <TableCell>{row.busPassId}</TableCell>
                   <TableCell>
                     <Select
