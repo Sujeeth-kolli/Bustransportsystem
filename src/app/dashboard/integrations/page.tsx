@@ -7,6 +7,8 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
+import {Link, useNavigate} from "react-router-dom";
+import AddRoutePage from '@/app/AddRoutePage';
 
 import { config } from '@/config';
 import { RouteCard, type Route } from '@/components/dashboard/routes/routes-card';
@@ -34,6 +36,8 @@ const routes = [
   // Add more routes as needed
 ] as Route[];
 
+
+
 export default function Page(): React.JSX.Element {
   return (
     <Stack spacing={3}>
@@ -41,9 +45,7 @@ export default function Page(): React.JSX.Element {
         <Stack spacing={1} sx={{ flex: '1 1 auto' }}>
           <Typography variant="h4">Bus Routes</Typography>
           <Stack sx={{ alignItems: 'center' }} direction="row" spacing={1}>
-            <Button color="inherit" startIcon={<AddIcon />}>
-              Add Route
-            </Button>
+          <Link to="/AddRoutePage">Add Route</Link>
             <Button color="inherit" startIcon={<RouteIcon />}>
               Add Trip
             </Button>
