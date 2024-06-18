@@ -44,7 +44,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
             <TableRow>
               <TableCell>Request id 12 </TableCell>
               <TableCell>Student name</TableCell>
-             { /*<TableCell sortDirection="desc">Date</TableCell>*/}
+              {/*<TableCell sortDirection="desc">Date</TableCell>*/}
               <TableCell>Status</TableCell>
             </TableRow>
           </TableHead>
@@ -56,7 +56,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
                 <TableRow hover key={order.id}>
                   <TableCell>{order.id}</TableCell>
                   <TableCell>{order.customer.name}</TableCell>
-                 {/* <TableCell>{dayjs(order.createdAt).format('MMM D, YYYY')}</TableCell> */}
+                  {/* <TableCell>{dayjs(order.createdAt).format('MMM D, YYYY')}</TableCell> */}
                   <TableCell>
                     <Chip color={color} label={label} size="small" />
                   </TableCell>
@@ -74,7 +74,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
           size="small"
           variant="text"
         >
-         {/* View all */}
+          {/* View all */}
         </Button>
       </CardActions>
     </Card>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Schedule as ScheduleIcon } from '@mui/icons-material';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -6,37 +7,35 @@ import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { Clock as ClockIcon } from '@phosphor-icons/react/dist/ssr/Clock';
-import { Download as DownloadIcon } from '@phosphor-icons/react/dist/ssr/Download';
 import dayjs from 'dayjs';
 
-export interface Integration {
+export interface Route {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  logo: string;
-  installs: number;
+  icon: string;
+  trips: number;
   updatedAt: Date;
 }
 
-export interface IntegrationCardProps {
-  integration: Integration;
+export interface RouteCardProps {
+  route: Route;
 }
 
-export function IntegrationCard({ integration }: IntegrationCardProps): React.JSX.Element {
+export function RouteCard({ route }: RouteCardProps): React.JSX.Element {
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <CardContent sx={{ flex: '1 1 auto' }}>
         <Stack spacing={2}>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Avatar src={integration.logo} variant="square" />
+            <Avatar src={route.icon} variant="square" />
           </Box>
           <Stack spacing={1}>
             <Typography align="center" variant="h5">
-              {integration.title}
+              {route.name}
             </Typography>
             <Typography align="center" variant="body1">
-              {integration.description}
+              {route.description}
             </Typography>
           </Stack>
         </Stack>
@@ -44,17 +43,14 @@ export function IntegrationCard({ integration }: IntegrationCardProps): React.JS
       <Divider />
       <Stack direction="row" spacing={2} sx={{ alignItems: 'center', justifyContent: 'space-between', p: 2 }}>
         <Stack sx={{ alignItems: 'center' }} direction="row" spacing={1}>
-          <ClockIcon fontSize="var(--icon-fontSize-sm)" />
+          <ScheduleIcon fontSize="small" />
           <Typography color="text.secondary" display="inline" variant="body2">
-            Updated {dayjs(integration.updatedAt).format('MMM D, YYYY')}
+            Updated {dayjs(route.updatedAt).format('MMM D, YYYY')}
           </Typography>
         </Stack>
-        <Stack sx={{ alignItems: 'center' }} direction="row" spacing={1}>
-          <DownloadIcon fontSize="var(--icon-fontSize-sm)" />
-          <Typography color="text.secondary" display="inline" variant="body2">
-            {integration.installs} installs
-          </Typography>
-        </Stack>
+        <Typography color="text.secondary" display="inline" variant="body2">
+          {route.trips} trips
+        </Typography>
       </Stack>
     </Card>
   );
