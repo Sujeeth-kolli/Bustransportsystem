@@ -1,8 +1,13 @@
+// src/app/dashboard/customers/page.tsx
 import * as React from 'react';
+// import { Link } from 'next/link';
+// import AddIcon from '@mui/icons-material/Add';
 import AddIcon from '@mui/icons-material/Add';
 import DownloadIcon from '@mui/icons-material/Download';
+// import MenuIcon from '@mui/icons-material/Menu';
 import UploadIcon from '@mui/icons-material/Upload';
 import Button from '@mui/material/Button';
+// import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -31,7 +36,7 @@ const customers: Customer[] = [
     avatar: '/assets/avatar-9.png',
     email: 'idcse@gmail.com',
     phone: '415-907-2647',
-    passStatus: '/approval/USR-009', // Example links, actual logic may vary
+    passStatus: '/rejection/USR-009', // Example links, actual logic may vary
     busPassId: 'BP-009',
     paymentStatus: 'not paid',
     stop: 'First Avenue',
@@ -51,14 +56,14 @@ export default function Page(): React.ReactElement {
       <Stack direction="row" spacing={3}>
         <Stack spacing={1} sx={{ flex: '1 1 auto' }}>
           <Typography variant="h4">Customers</Typography>
-          <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+          {/* <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
             <Button color="inherit" startIcon={<UploadIcon />}>
               Import
             </Button>
             <Button color="inherit" startIcon={<DownloadIcon />}>
               Export
             </Button>
-          </Stack>
+          </Stack> */}
         </Stack>
         <div>
           <Button startIcon={<AddIcon />} variant="contained">

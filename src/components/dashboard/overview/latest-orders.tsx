@@ -13,7 +13,6 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr/ArrowRight';
-import dayjs from 'dayjs';
 
 const statusMap = {
   Approved: { label: 'Approved', color: 'success' },
@@ -43,7 +42,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
         <Table sx={{ minWidth: 800 }}>
           <TableHead>
             <TableRow>
-              <TableCell>Request id </TableCell>
+              <TableCell>Request id 12 </TableCell>
               <TableCell>Student name</TableCell>
              { /*<TableCell sortDirection="desc">Date</TableCell>*/}
               <TableCell>Status</TableCell>

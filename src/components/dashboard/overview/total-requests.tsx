@@ -103,7 +103,7 @@ export interface TotalRequestsCardProps {
 
 export function TotalRequests({ value }: TotalRequestsCardProps): React.JSX.Element {
   return (
-    <Card sx={{ width: '300px', padding: '16px', borderRadius: '12px' }}>
+    <Card sx={{width: '300px', padding: '16px', borderRadius: '12px' }}>
       <CardContent sx={{ padding: 0 }}>
         <Stack spacing={2}>
           <Typography color="text.secondary" variant="overline">

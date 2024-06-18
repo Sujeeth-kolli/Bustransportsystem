@@ -1,7 +1,6 @@
 import * as React from 'react';
 import type { Metadata } from 'next';
 import Grid from '@mui/material/Unstable_Grid2';
-import dayjs from 'dayjs';
 
 import { config } from '@/config';
 import { ApprovalsDone } from '@/components/dashboard/overview/approvals-done';
@@ -33,42 +32,42 @@ export default function Page(): React.JSX.Element {
               customer: { name: 'Ekaterina Tankova' },
               amount: 30.5,
               status: 'Approved',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              createdAt: undefined
             },
             {
               id: 'ORD-006',
               customer: { name: 'Cao Yu' },
               amount: 25.1,
               status: 'Approved',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              createdAt: undefined
             },
             {
               id: 'ORD-004',
               customer: { name: 'Alexa Richardson' },
               amount: 10.99,
               status: 'Rejected',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              createdAt: undefined
             },
             {
               id: 'ORD-003',
               customer: { name: 'Anje Keizer' },
               amount: 96.43,
               status: 'Approved',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              createdAt: undefined
             },
             {
               id: 'ORD-002',
               customer: { name: 'Clarke Gillebert' },
               amount: 32.54,
               status: 'Approved',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              createdAt: undefined
             },
             {
               id: 'ORD-001',
               customer: { name: 'Adam Denisov' },
               amount: 16.76,
               status: 'Approved',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              createdAt: undefined
             },
           ]}
           sx={{ height: '100%' }}
