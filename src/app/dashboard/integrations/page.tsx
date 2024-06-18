@@ -9,10 +9,8 @@ import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
 
 import { config } from '@/config';
-import { RouteCard, type Route } from '@/components/dashboard/routes/routes-card'; // Renamed IntegrationCard to RouteCard
-
-// Renamed Integration to Route
-import { RoutesFilters } from '@/components/dashboard/routes/routes-filters'; // Renamed CompaniesFilters to RoutesFilters
+import { RouteCard, type Route } from '@/components/dashboard/routes/routes-card';
+import { RoutesFilters } from '@/components/dashboard/routes/routes-filters';
 
 export const metadata = { title: `Bus Routes | Dashboard | ${config.site.name}` };
 
