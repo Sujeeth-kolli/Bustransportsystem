@@ -1,48 +1,40 @@
-// src/app/dashboard/customers/page.tsx
 import * as React from 'react';
-// import { Link } from 'next/link';
-// import AddIcon from '@mui/icons-material/Add';
 import AddIcon from '@mui/icons-material/Add';
-import DownloadIcon from '@mui/icons-material/Download';
-// import MenuIcon from '@mui/icons-material/Menu';
-import UploadIcon from '@mui/icons-material/Upload';
 import Button from '@mui/material/Button';
-// import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { config } from '@/config';
-import { CustomersFilters } from '@/components/dashboard/bus-pass-details/customers-filters';
-import { CustomersTable, type Customer } from '@/components/dashboard/bus-pass-details/customers-table';
+import { CustomersFilters } from '@/components/dashboard/bus-pass-details/bus-pass-filters';
+import { CustomersTable, type Customer } from '@/components/dashboard/bus-pass-details/bus-pass-table';
 
 export const metadata = { title: `Customers | Dashboard | ${config.site.name}` };
 
 const customers: Customer[] = [
   {
-    id: 'USR-010',
+    id: 'USR-001',
     name: 'Alcides Antonio',
     avatar: '/assets/avatar-10.png',
     email: 'idcse@gmail.com',
     phone: '908-691-3242',
-    passStatus: '/approval/USR-010', // Example links, actual logic may vary
+    passStatus: '/approval',
     busPassId: 'BP-010',
     paymentStatus: 'paid',
     stop: 'Main Street',
     passValidity: '2024-12-31',
   },
   {
-    id: 'USR-009',
+    id: 'USR-002',
     name: 'Marcus Finn',
     avatar: '/assets/avatar-9.png',
     email: 'idcse@gmail.com',
     phone: '415-907-2647',
-    passStatus: '/rejection/USR-009', // Example links, actual logic may vary
+    passStatus: '/rejection',
     busPassId: 'BP-009',
     paymentStatus: 'not paid',
     stop: 'First Avenue',
     passValidity: '2025-01-15',
   },
-  // Add other customers with similar fields
 ];
 
 export default function Page(): React.ReactElement {
@@ -55,15 +47,7 @@ export default function Page(): React.ReactElement {
     <Stack spacing={3}>
       <Stack direction="row" spacing={3}>
         <Stack spacing={1} sx={{ flex: '1 1 auto' }}>
-          <Typography variant="h4">Customers</Typography>
-          {/* <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-            <Button color="inherit" startIcon={<UploadIcon />}>
-              Import
-            </Button>
-            <Button color="inherit" startIcon={<DownloadIcon />}>
-              Export
-            </Button>
-          </Stack> */}
+          <Typography variant="h4">Student Details</Typography>
         </Stack>
         <div>
           <Button startIcon={<AddIcon />} variant="contained">

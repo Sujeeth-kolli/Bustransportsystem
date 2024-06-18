@@ -22,10 +22,8 @@ const statusMap = {
 
 export interface Order {
   id: string;
-  customer: { name: string };
-  amount: number;
+  users: { name: string };
   status: 'Approved' | 'Rejected' | 'refunded';
-  createdAt: Date;
 }
 
 export interface LatestOrdersProps {
@@ -35,16 +33,15 @@ export interface LatestOrdersProps {
 
 export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.Element {
   return (
-    <Card sx={sx}>
-      <CardHeader title="Latest orders" />
+    <Card sx={{ ...sx, boxShadow: 3, borderRadius: 2 }}>
+      <CardHeader title="Latest Records of Students" />
       <Divider />
-      <Box sx={{ overflowX: 'auto' }}>
-        <Table sx={{ minWidth: 800 }}>
+      <Box sx={{ overflowX: 'auto', width: '100%' }}>
+        <Table sx={{ minWidth: 800, width: '100%' }}>
           <TableHead>
             <TableRow>
-              <TableCell>Request id 12 </TableCell>
-              <TableCell>Student name</TableCell>
-              {/*<TableCell sortDirection="desc">Date</TableCell>*/}
+              <TableCell>Request ID</TableCell>
+              <TableCell>Student Name</TableCell>
               <TableCell>Status</TableCell>
             </TableRow>
           </TableHead>
@@ -55,8 +52,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
               return (
                 <TableRow hover key={order.id}>
                   <TableCell>{order.id}</TableCell>
-                  <TableCell>{order.customer.name}</TableCell>
-                  {/* <TableCell>{dayjs(order.createdAt).format('MMM D, YYYY')}</TableCell> */}
+                  <TableCell>{order.users.name}</TableCell>
                   <TableCell>
                     <Chip color={color} label={label} size="small" />
                   </TableCell>
@@ -74,7 +70,7 @@ export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.
           size="small"
           variant="text"
         >
-          {/* View all */}
+          View all
         </Button>
       </CardActions>
     </Card>

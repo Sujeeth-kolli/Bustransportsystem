@@ -28,18 +28,25 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
       />
       <Box
         sx={{
-          bgcolor: 'var(--mui-palette-background-default)',
+          bgcolor: 'background.default',
           display: 'flex',
           flexDirection: 'column',
           position: 'relative',
-          minHeight: '100%',
+          minHeight: '100vh',
         }}
       >
         <SideNav />
-        <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', pl: { lg: 'var(--SideNav-width)' } }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flex: '1 1 auto',
+            flexDirection: 'column',
+            pl: { lg: 'var(--SideNav-width)' },
+          }}
+        >
           <MainNav />
           <main>
-            <Container maxWidth="xl" sx={{ py: '64px' }}>
+            <Container maxWidth="xl" sx={{ py: 4 }}>
               {children}
             </Container>
           </main>
