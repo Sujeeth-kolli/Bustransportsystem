@@ -3,8 +3,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Route } from '@/components/dashboard/routes/routes-card';
-
-
+'use client';
 interface AddRoutePageProps {
   onAddRoute: (newRoute: Route) => void; // Callback to handle adding route
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+// import { Link } from 'react-router-dom';
 import { Add as AddIcon, Route as RouteIcon } from '@mui/icons-material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -7,7 +8,10 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import dayjs from 'dayjs';
+// //import RouterLink from 'next/link';
+import Link from 'next/link';
 
+import { paths } from '@/paths';
 import { config } from '@/config';
 import { RouteCard, type Route } from '@/components/dashboard/routes/routes-card';
 import { RoutesFilters } from '@/components/dashboard/routes/routes-filters';
@@ -41,8 +45,8 @@ export default function Page(): React.JSX.Element {
         <Stack spacing={1} sx={{ flex: '1 1 auto' }}>
           <Typography variant="h4">Bus Routes</Typography>
           <Stack sx={{ alignItems: 'center' }} direction="row" spacing={1}>
-            <Button color="inherit" startIcon={<AddIcon />}>
-              Add Route
+            <Button color="inherit" startIcon={<AddIcon />} component={Link} href={paths.app.AddRoutePage}>            
+        Add route
             </Button>
             <Button color="inherit" startIcon={<RouteIcon />}>
               Add Trip
