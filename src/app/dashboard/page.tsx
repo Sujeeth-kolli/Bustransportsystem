@@ -39,7 +39,7 @@ export default function Page(): React.JSX.Element {
           orders={[
             {
               id: '007',
-              users: { name: 'Ekaterina Tankova' },
+              users: { name: 'Tankova' },
               status: 'Approved',
 <<<<<<< HEAD
 =======
